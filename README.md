@@ -1,2 +1,1 @@
-# Kanban
-Kanban table
+# Wedding

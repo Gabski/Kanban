@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Kanba</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel='stylesheet' id='font' href="https://fonts.googleapis.com/css?family=Exo:400,600,700,900">
+</head>
+
+<body>
+    <input class="file_name" type="text" id="file_name" value="new_projekt">
+    <input type='file' id="load" accept=".tasks" class="d-none" onchange='openFile(event)'>
+
+    <nav class="toolbar">
+        <ul class="toolbar__list">
+            <li><button class="toolbar__list__element" id="save"><i class="fas fa-save"></i></button></li>
+                <li><label class="toolbar__list__element" for="load"><i class="fas fa-folder-open"></i></label></li>
+             
+        </ul>
+
+        <div id="timer" class="timer">
+                <div class="timer__icon"><i class="fas fa-clock"></i></div>
+                <div class="timer__list list --sortable" data-list="timer"></div>
+            </div>
+
+    
+    </nav>
+
+
+
+    <div class="board">
+
+        <div class="column">
+            <div class="column__head c-1">Oczekujące <button class="column__head__tool" id="new"><i
+                        class="fas fa-plus"></i></button></div>
+            <div class="list" data-list="1"></div>
+        </div>
+
+        <div class="column">
+            <div class="column__head c-2">W trakcie</div>
+            <div class="list" data-list="2"></div>
+        </div>
+
+        <div class="column">
+            <div class="column__head c-3">Do testów</div>
+            <div class="list" data-list="3"></div>
+        </div>
+
+        <div class="column">
+            <div class="column__head c-4">Zakończone</div>
+            <div class="list" data-list="4"></div>
+        </div>
+
+        <div class="column">
+            <div class="column__head c-4">Archiwum</div>
+            <div class="list" data-list="5"></div>
+        </div>
+
+
+    </div>
+
+    <div class="foot">
+      
+     
+        <div id="trash"><i class="fas fa-trash"></i></div>
+        <div>
+
+
+            <script src="jquery-1.12.4.js"></script>
+            <script src="jquery-ui.js"></script>
+            <script src="app.js"></script>
+</body>
+
+</html>
